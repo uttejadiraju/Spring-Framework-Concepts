@@ -1,7 +1,0 @@
-controllerAdvice\GlobalExceptionHandler.class
-controllerAdvice\WebConfig.class
-controllerAdvice\Employee.class
-controllerAdvice\Users.class
-controllerAdvice\MyWebInitializer.class
-controllerAdvice\UnauthorizedException.class
-controllerAdvice\SamplePOJO.class

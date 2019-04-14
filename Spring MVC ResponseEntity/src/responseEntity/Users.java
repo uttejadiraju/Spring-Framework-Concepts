@@ -14,7 +14,7 @@ public class Users {
 		Employee emp = new Employee();
 		emp.setId(55);
 		emp.setName("hero");
-		return new ResponseEntity(HttpStatus.UNAUTHORIZED);
+		return new ResponseEntity<Employee>(HttpStatus.UNAUTHORIZED);
 	}
 	
 	@RequestMapping(value = "/success", method = RequestMethod.GET)
@@ -30,6 +30,6 @@ public class Users {
 		Employee emp = new Employee();
 		emp.setId(55);
 		emp.setName("hero");
-		return new ResponseEntity(HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<Employee>(HttpStatus.BAD_REQUEST);
 	}
 }

@@ -20,7 +20,12 @@ public class Users {
 
 	@RequestMapping(value = "/write", method = RequestMethod.GET)
 	public @ResponseBody String json(HttpServletResponse res) {
-		res.addCookie(new Cookie("Uttej", "82"));
+//		Cookie my = new Cookie("Uttej", "82");
+//		my.setMaxAge(31536000);
+//		my.setSecure(true);
+//		res.addCookie(my);
+		res.addHeader("Set-Cookie", "SID=ererer; Path=/; Secure; HttpOnly");
+		
 		return "The cookie is set successfully!!!";
 	}
 }

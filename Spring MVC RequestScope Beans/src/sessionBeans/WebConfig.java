@@ -16,10 +16,41 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebConfig {
 	@Bean
 	@Scope(WebApplicationContext.SCOPE_SESSION)
-	public Users get() {
+	public Users1 get() {
 		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
 		  Date date = new Date();  
-		return new Users(formatter.format(date));
+		return new Users1(formatter.format(date));
+	}
+	
+	@Bean
+	public Users5 get4() {
+		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		  Date date = new Date();  
+		return new Users5(formatter.format(date));
+	}
+
+	@Bean
+	@Scope(WebApplicationContext.SCOPE_REQUEST)
+	public Users2 get1() {
+		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		  Date date = new Date();  
+		return new Users2(formatter.format(date));
+	}
+	
+	@Bean
+	@Scope(WebApplicationContext.SCOPE_APPLICATION)
+	public Users3 get2() {
+		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		  Date date = new Date();  
+		return new Users3(formatter.format(date));
+	}
+	
+	@Bean
+	@Scope(WebApplicationContext.SCOPE_GLOBAL_SESSION)
+	public Users4 get3() {
+		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		  Date date = new Date();  
+		return new Users4(formatter.format(date));
 	}
 
 	@Bean
